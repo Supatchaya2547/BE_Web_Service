@@ -1,21 +1,23 @@
 package models
 
+import "time"
+
 type Courses struct {
-	Course_ID         int     `json:"course_id"`   // ใช้ string เพราะว่าเป็น UUID
-	Course_Name       string  `json:"course_name"` // ชื่อคอร์ส
-	Course_Desc       string  `json:"course_desc"` // คำอธิบาย
-	Thumbnail_Url     string  `json:"thumbnail_url"`
-	Course_Type       string  `json:"course_type"`       // ประเภทคอร์ส (เช่น Programming, Design, etc.)
-	Course_Instructor string  `json:"course_instructor"` // ชื่อผู้สอน
-	Profile_Url       string  `json:"profile_url"`
-	Course_Price      float64 `json:"course_price"`     // ราคา
-	Duration          string  `json:"duration"`         // ระยะเวลา
-	Rating            float64 `json:"rating"`           // คะแนนเฉลี่ย (1-5)
-	Num_reviews       int     `json:"num_reviews"`      // จำนวนรีวิว
-	Enrollment_count  int     `json:"enrollment_count"` // จำนวนคนที่ลงทะเบียน
-	Detail_url        string  `json:"detail_url"`       // URL ของรายละเอียดคอร์ส
-	Created_at        string  `json:"created_at"`
-	Updated_at        string  `json:"updated_at"`
+	Course_ID         int       `json:"course_id"`   // ใช้ string เพราะว่าเป็น UUID
+	Course_Name       string    `json:"course_name"` // ชื่อคอร์ส
+	Course_Desc       string    `json:"course_desc"` // คำอธิบาย
+	Thumbnail_Url     string    `json:"thumbnail_url"`
+	Course_Type       string    `json:"course_type"`       // ประเภทคอร์ส (เช่น Programming, Design, etc.)
+	Course_Instructor string    `json:"course_instructor"` // ชื่อผู้สอน
+	Profile_Url       string    `json:"profile_url"`
+	Course_Price      float64   `json:"course_price"`     // ราคา
+	Duration          string    `json:"duration"`         // ระยะเวลา
+	Rating            float64   `json:"rating"`           // คะแนนเฉลี่ย (1-5)
+	Num_reviews       int       `json:"num_reviews"`      // จำนวนรีวิว
+	Enrollment_count  int       `json:"enrollment_count"` // จำนวนคนที่ลงทะเบียน
+	Detail_url        string    `json:"detail_url"`       // URL ของรายละเอียดคอร์ส
+	Created_at        time.Time `json:"created_at"`
+	Updated_at        time.Time `json:"updated_at"`
 }
 
 type CType struct {

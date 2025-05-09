@@ -176,6 +176,12 @@ func GetCourseByID(c *gin.Context) {
 		return
 	}
 
+	// เอา url และ act มาใช้เฉย ๆ ถ้ามี (ไม่บังคับ)
+	url := c.Query("url")
+	act := c.Query("act")
+
+	log.Println("CourseID:", courseID, "URL:", url, "ACT:", act)
+
 	var course models.Courses
 	query := `
 	SELECT c.course_id, c.course_name, c.course_desc, c.thumbnail_url, 

@@ -58,16 +58,16 @@ func ClickLogHandler() gin.HandlerFunc {
 	return func(c *gin.Context) {
 		course_id := c.Param("id")
 		url := c.Query("url")
-		act := c.Query("act")
+		//act := c.Query("act")
 
-		if url == "" {
-			c.JSON(http.StatusBadRequest, gin.H{"error": "URL is required (Your Website URL)"})
-			return
-		}
-		if act == "" {
-			c.JSON(http.StatusBadRequest, gin.H{"error": "action is required (Ex click, search)"})
-			return
-		}
+		// if url == "" {
+		// 	c.JSON(http.StatusBadRequest, gin.H{"error": "URL is required (Your Website URL)"})
+		// 	return
+		// }
+		// if act == "" {
+		// 	c.JSON(http.StatusBadRequest, gin.H{"error": "action is required (Ex click, search)"})
+		// 	return
+		// }
 		// fmt.Println("⭐ req.URL : ", req.Affiliate_Url)
 		// fmt.Println("⭐ req.Action : ", req.Action)
 		// ตรวจสอบ affiliate_id แล้วเก็บค่าเอาไว้เตรียมบันทึกลง DB

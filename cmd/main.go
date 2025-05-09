@@ -71,8 +71,9 @@ func main() {
 	protected := r.Group("/api")
 	r.GET("/getType", handlers.GetType)
 	r.GET("/getInts", handlers.GetInts)
-	r.GET("/GetCoursesById/:id", handlers.ClickLogHandler(), handlers.GetCourseByID)
+	//r.GET("/GetCoursesById/:course_id", handlers.GetCourseByID)
 
+	r.GET("/GetCoursesById/:course_id", handlers.ClickLogHandler(), handlers.GetCourseByID)
 	//API ข้อ 1, 2
 	protected.Use(JWTAuthMiddleware())
 	{
